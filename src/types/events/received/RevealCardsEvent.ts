@@ -1,5 +1,5 @@
 type RevealCardsEvent = {
-  cards: Map<username: any, url: any>
+  cards: {username: string; url: string}[]
 }
 
 export default RevealCardsEvent
