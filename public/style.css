@@ -44,3 +44,56 @@ body {
   font-weight: bold;
   padding: 8px 32px;
 }
+
+.form__right-actions {
+  display: flex;
+  align-content: flex-end;
+  justify-content: flex-end;
+}
+
+.tabs {
+  border-radius: var(--border-radius);
+}
+
+.tabs__header {
+  background: none;
+}
+
+.tabs__header ul {
+  background-color: none;
+  list-style: none;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs__header ul li {
+  flex: 1;
+}
+
+.tabs__header ul li button {
+  width: 100%;
+  background-color: var(--normal-color);
+  height: 48px;
+  line-height: 48px;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.tabs__header ul:first-child button {
+  border-top-left-radius: 5px;
+}
+.tabs__header ul:last-child button {
+  border-top-right-radius: 5px;
+}
+.tabs__header ul li button.selected {
+  background-color: var(--light-color);
+}
+
+.tabs__content {
+  background-color: var(--light-color);
+  padding: 40px 64px;
+}
