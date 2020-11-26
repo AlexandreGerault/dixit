@@ -1,0 +1,46 @@
+:root {
+  --dark-color: #341c0f;
+  --normal-color: #5d321a;
+  --light-color: #6b3c23;
+  --lighter-color: #fdff91;
+  --border-radius: 5px;
+}
+
+body {
+  background-color: var(--dark-color);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form .input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .label {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.form .input {
+  background-color: var(--normal-color);
+  border-radius: var(--border-radius);
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 16px;
+  color: white;
+}
+
+.form button {
+  background-color: var(--lighter-color);
+  border: none;
+  border-radius: var(--border-radius);
+  height: 40px;
+  font-weight: bold;
+  padding: 8px 32px;
+}

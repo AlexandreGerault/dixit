@@ -2,17 +2,22 @@ import React from 'react'
 
 const JoinRoomForm = () => {
   return (
-    <form>
-      <div>
-        <label htmlFor="pseudo">Pseudo</label>
-        <input type="text" name="pseudo" />
+    <form className="form">
+      <div className="input-group">
+        <label htmlFor="pseudo" className="label">
+          Pseudo
+        </label>
+        <input type="text" name="pseudo" className="input" />
+      </div>
+      <div className="input-group">
+        <label htmlFor="room" className="label">
+          Salle
+        </label>
+        <input type="text" name="room" className="input" />
       </div>
       <div>
-        <label htmlFor="room">Salle</label>
-        <input type="text" name="room" />
+        <button>Rejoindre</button>
       </div>
-
-      <button>Rejoindre</button>
     </form>
   )
 }
