@@ -5,6 +5,7 @@
   --lighter-color: #fdff91;
   --border-radius: 5px;
   --text-color: white;
+  --good-color: #1a9202;
 }
 
 body {
@@ -12,6 +13,10 @@ body {
   background: url('logo.png') top 24px left 40px, var(--dark-color);
   background-size: 10%;
   background-repeat: no-repeat;
+}
+
+.App {
+  display: flex;
 }
 
 .form {
@@ -132,4 +137,29 @@ body {
   font-weight: bold;
   font-size: 0.9rem;
   margin-left: 8px;
+}
+
+.card img {
+  border: 10px solid rgba(0, 0, 0, 0);
+}
+
+.card__playerName {
+  width: calc(100% - 20px);
+  margin: auto;
+  padding: 1rem 0;
+  transform: translateY(calc(-100% - 13px));
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card img.card--selected {
+  border-radius: 20px;
+  border: 10px solid var(--text-color);
+}
+
+.card img.card--good {
+  border-radius: 20px;
+  border: 10px solid var(--good-color);
 }
