@@ -4,10 +4,14 @@
   --light-color: #6b3c23;
   --lighter-color: #fdff91;
   --border-radius: 5px;
+  --text-color: white;
 }
 
 body {
-  background-color: var(--dark-color);
+  color: var(--text-color);
+  background: url('logo.png') top 24px left 40px, var(--dark-color);
+  background-size: 10%;
+  background-repeat: no-repeat;
 }
 
 .form {
@@ -22,7 +26,6 @@ body {
 }
 
 .form .label {
-  color: white;
   margin-bottom: 16px;
 }
 
@@ -33,7 +36,6 @@ body {
   height: 40px;
   line-height: 40px;
   padding: 0 16px;
-  color: white;
 }
 
 .form button {
@@ -58,7 +60,6 @@ body {
 .tabs__header {
   background: none;
 }
-
 .tabs__header ul {
   background-color: none;
   list-style: none;
@@ -68,21 +69,17 @@ body {
   padding: 0;
   margin: 0;
 }
-
 .tabs__header ul li {
   flex: 1;
 }
-
 .tabs__header ul li button {
   width: 100%;
   background-color: var(--normal-color);
   height: 48px;
   line-height: 48px;
   border: 0;
-  color: white;
   cursor: pointer;
 }
-
 .tabs__header ul:first-child button {
   border-top-left-radius: 5px;
 }
@@ -96,4 +93,43 @@ body {
 .tabs__content {
   background-color: var(--light-color);
   padding: 40px 64px;
+}
+
+.sidebar {
+  background: var(--light-color);
+  width: 300px;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar p:first-child {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar p.sidebar__heading {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.sidebar__player-list {
+  list-style: none;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar__player-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-score {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-left: 8px;
 }

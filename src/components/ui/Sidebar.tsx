@@ -9,21 +9,25 @@ const Sidebar: React.FunctionComponent<SidebarProps> = ({
   players,
 }: SidebarProps) => {
   const playerListItems = players.map(player => (
-    <li key={player.name}>
-      {player.master ? '👑 ' : ''}
-      {player.name}
-      {player.status === 'done'
-        ? ' ✔'
-        : player.status === 'pending'
-        ? ' ⏳'
-        : ''}
+    <li key={player.name} className="sidebar__player-item">
+      <span>
+        {player.name} <span className="player-score">{player.score}</span>
+      </span>
+      <span>
+        {player.master ? '👑 ' : ''}
+        {player.status === 'done'
+          ? ' ✔'
+          : player.status === 'pending'
+          ? ' ⏳'
+          : ''}
+      </span>
     </li>
   ))
 
   return (
-    <div>
-      <p>Joueurs connectés</p>
-      <ul>{playerListItems}</ul>
+    <div className="sidebar">
+      <p className="sidebar__heading">Joueurs connectés</p>
+      <ul className="sidebar__player-list">{playerListItems}</ul>
     </div>
   )
 }
