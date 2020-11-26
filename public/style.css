@@ -17,6 +17,10 @@ body {
 
 .App {
   display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .form {
@@ -162,4 +166,30 @@ body {
 .card img.card--good {
   border-radius: 20px;
   border: 10px solid var(--good-color);
+}
+
+.scoreboard {
+  max-width: 600px;
+}
+
+.scoreboard__list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.scoreboard__list > .scoreboard__player:first-child {
+  font-size: 4rem;
+}
+
+.scoreboard__list > .scoreboard__player {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scoreboard__list > .scoreboard__player > span:first-child {
+  margin-right: 4rem;
 }
