@@ -1,10 +1,7 @@
 import React from 'react'
 import {TabItem} from '../components/navigation/TabItem'
 
-const GetTabItemFromKey = (
-  children: any,
-  key: string,
-): typeof TabItem | undefined => {
+const GetTabItemFromKey = (children: any, key: string): React.ReactElement => {
   let tab: any = undefined
 
   React.Children.map(children, child => {

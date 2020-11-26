@@ -1,24 +1,20 @@
 import React, {FunctionComponent, useState} from 'react'
 import PropTypes, {InferProps} from 'prop-types'
-import {GetTabItemFromKey} from '../../functions/GetTabItemFromKey'
-import {GetTabKeysFromChildren} from '../../functions/GetTabKeysFromChildren'
-import {TabItem} from './TabItem'
+import {useTabs} from '../../hooks/useTabs'
 
 function TabNav({children}: InferProps<typeof TabNav.propTypes>) {
-  const [tabKeys, setTabKeys] = useState(() => GetTabKeysFromChildren(children))
-  const [activeTab, setActiveTab] = useState(tabKeys[0])
-  const tab = GetTabItemFromKey(children, activeTab)
+  const {keys, activeTab, setActiveTab, tab} = useTabs(children)
 
   return (
     <>
       <ul>
-        {tabKeys.map(k => (
-          <li key={k} onClick={() => setActiveTab(k)}>
-            {k}
-          </li>
-        ))}
+        {Array.isArray(keys) &&
+          keys.map(k => (
+            <li key={k}>
+              <button onClick={() => setActiveTab(k)}>{k}</button>
+            </li>
+          ))}
       </ul>
-      <p>Active tab : {activeTab}</p>
       {tab}
     </>
   )
