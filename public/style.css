@@ -1,0 +1,195 @@
+:root {
+  --dark-color: #341c0f;
+  --normal-color: #5d321a;
+  --light-color: #6b3c23;
+  --lighter-color: #fdff91;
+  --border-radius: 5px;
+  --text-color: white;
+  --good-color: #1a9202;
+}
+
+body {
+  color: var(--text-color);
+  background: url('logo.png') top 24px left 40px, var(--dark-color);
+  background-size: 10%;
+  background-repeat: no-repeat;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form .input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .label {
+  margin-bottom: 16px;
+}
+
+.form .input {
+  background-color: var(--normal-color);
+  border-radius: var(--border-radius);
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 16px;
+}
+
+.form button {
+  background-color: var(--lighter-color);
+  border: none;
+  border-radius: var(--border-radius);
+  height: 40px;
+  font-weight: bold;
+  padding: 8px 32px;
+}
+
+.form__right-actions {
+  display: flex;
+  align-content: flex-end;
+  justify-content: flex-end;
+}
+
+.tabs {
+  border-radius: var(--border-radius);
+}
+
+.tabs__header {
+  background: none;
+}
+.tabs__header ul {
+  background-color: none;
+  list-style: none;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.tabs__header ul li {
+  flex: 1;
+}
+.tabs__header ul li button {
+  width: 100%;
+  background-color: var(--normal-color);
+  height: 48px;
+  line-height: 48px;
+  border: 0;
+  cursor: pointer;
+}
+.tabs__header ul:first-child button {
+  border-top-left-radius: 5px;
+}
+.tabs__header ul:last-child button {
+  border-top-right-radius: 5px;
+}
+.tabs__header ul li button.selected {
+  background-color: var(--light-color);
+}
+
+.tabs__content {
+  background-color: var(--light-color);
+  padding: 40px 64px;
+}
+
+.sidebar {
+  background: var(--light-color);
+  width: 300px;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar p:first-child {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar p.sidebar__heading {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.sidebar__player-list {
+  list-style: none;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar__player-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-score {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
+
+.card img {
+  border: 10px solid rgba(0, 0, 0, 0);
+}
+
+.card__playerName {
+  width: calc(100% - 20px);
+  margin: auto;
+  padding: 1rem 0;
+  transform: translateY(calc(-100% - 13px));
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card img.card--selected {
+  border-radius: 20px;
+  border: 10px solid var(--text-color);
+}
+
+.card img.card--good {
+  border-radius: 20px;
+  border: 10px solid var(--good-color);
+}
+
+.scoreboard {
+  max-width: 600px;
+}
+
+.scoreboard__list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.scoreboard__list > .scoreboard__player:first-child {
+  font-size: 4rem;
+}
+
+.scoreboard__list > .scoreboard__player {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scoreboard__list > .scoreboard__player > span:first-child {
+  margin-right: 4rem;
+}
