@@ -15,7 +15,7 @@ const JoinRoomForm = () => {
         </label>
         <input type="text" name="room" className="input" />
       </div>
-      <div>
+      <div className="form__right-actions">
         <button>Rejoindre</button>
       </div>
     </form>

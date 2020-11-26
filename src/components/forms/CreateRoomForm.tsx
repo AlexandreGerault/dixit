@@ -21,7 +21,7 @@ const CreateRoomForm = () => {
         </label>
         <input type="text" name="room" className="input" />
       </div>
-      <div>
+      <div className="form__right-actions">
         <button>Créer une partie</button>
       </div>
     </form>
