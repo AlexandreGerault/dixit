@@ -1,8 +1,7 @@
-import React, {FunctionComponent, useState} from 'react'
-import PropTypes, {InferProps} from 'prop-types'
+import React, {FunctionComponent} from 'react'
 import {useTabs} from '../../hooks/useTabs'
 
-function TabNav({children}: InferProps<typeof TabNav.propTypes>) {
+const TabNav: FunctionComponent<{}> = ({children}) => {
   const {keys, activeTab, setActiveTab, tab} = useTabs(children)
 
   return (
@@ -25,13 +24,6 @@ function TabNav({children}: InferProps<typeof TabNav.propTypes>) {
       <div className="tabs__content">{tab}</div>
     </div>
   )
-}
-
-TabNav.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
 }
 
 export {TabNav}

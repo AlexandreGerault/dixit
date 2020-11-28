@@ -1,13 +1,18 @@
-import React from 'react'
-import PropTypes, {InferProps} from 'prop-types'
-import {type} from 'os'
+import React, {FunctionComponent} from 'react'
 
-function Card({
+type CardProps = {
+  cardId: string
+  playerName: string | undefined
+  isSelectedCard: boolean | undefined
+  isGoodAnswer: boolean | undefined
+}
+
+const Card: FunctionComponent<CardProps> = ({
   cardId,
   playerName = '',
   isSelectedCard,
   isGoodAnswer,
-}: InferProps<typeof Card.propTypes>) {
+}) => {
   return (
     <div className="card">
       <img
@@ -19,13 +24,6 @@ function Card({
       {playerName && <div className="card__playerName">{playerName}</div>}
     </div>
   )
-}
-
-Card.propTypes = {
-  cardId: PropTypes.string.isRequired,
-  playerName: PropTypes.string,
-  isSelectedCard: PropTypes.bool,
-  isGoodAnswer: PropTypes.bool,
 }
 
 export {Card}
