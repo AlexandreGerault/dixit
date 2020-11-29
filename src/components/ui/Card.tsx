@@ -2,9 +2,9 @@ import React, {FunctionComponent} from 'react'
 
 type CardProps = {
   cardId: string
-  playerName: string | undefined
-  isSelectedCard: boolean | undefined
-  isGoodAnswer: boolean | undefined
+  playerName?: string
+  isSelectedCard?: boolean
+  isGoodAnswer?: boolean
 }
 
 const Card: FunctionComponent<CardProps> = ({
