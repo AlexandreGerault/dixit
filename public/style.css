@@ -145,6 +145,8 @@ button {
 
 .card img {
   border: 10px solid rgba(0, 0, 0, 0);
+  width: 100%;
+  height: auto;
 }
 
 .card__playerName {
@@ -203,4 +205,41 @@ button {
 
 .home .action-area {
   min-width: 33%;
+}
+
+.sidebar-layout {
+  display: grid;
+  grid-template-areas: 'content sidebar';
+  grid-template-columns: 1fr auto;
+}
+
+.sidebar-layout__content {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.game__heading {
+  text-align: center;
+  font-size: 4rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+}
+
+button.game__heading:hover {
+  text-decoration: underline;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-grid > .card {
+  max-width: 200px;
 }
