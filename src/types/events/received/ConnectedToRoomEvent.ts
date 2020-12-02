@@ -3,4 +3,4 @@ type ConnectedToRoomEvent = {
   roomUsers: string[]
 }
 
-export default ConnectedToRoomEvent
+export type {ConnectedToRoomEvent}
