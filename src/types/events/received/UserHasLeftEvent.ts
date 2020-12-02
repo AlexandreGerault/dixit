@@ -2,4 +2,4 @@ type UserHasLeftEvent = {
   username: string
 }
 
-export default UserHasLeftEvent
+export type {UserHasLeftEvent}

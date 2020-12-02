@@ -2,4 +2,4 @@ type UserHasJoinedEvent = {
   username: string
 }
 
-export default UserHasJoinedEvent
+export type {UserHasJoinedEvent}

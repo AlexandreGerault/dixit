@@ -2,4 +2,4 @@ type NewRoundEvent = {
   firstUserName: string
 }
 
-export default NewRoundEvent
+export type {NewRoundEvent}
