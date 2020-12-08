@@ -14,8 +14,8 @@ const Scoreboard: FunctionComponent<ScoreboardProps> = ({
         {players
           .sort((p1, p2) => p2.score - p1.score)
           .map(p => (
-            <li key={p.name} className="scoreboard__player">
-              <span>{p.name}</span>
+            <li key={p.pseudo} className="scoreboard__player">
+              <span>{p.pseudo}</span>
               <span>{p.score}</span>
             </li>
           ))}

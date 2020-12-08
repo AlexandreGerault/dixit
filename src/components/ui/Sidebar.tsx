@@ -6,21 +6,25 @@ type SidebarProps = {
 }
 
 const Sidebar: FunctionComponent<SidebarProps> = ({players}: SidebarProps) => {
-  const playerListItems = players.map(player => (
-    <li key={player.name} className="sidebar__player-item">
-      <span>
-        {player.name} <span className="player-score">{player.score}</span>
-      </span>
-      <span>
-        {player.master ? '👑 ' : ''}
-        {player.status === 'done'
-          ? ' ✔'
-          : player.status === 'pending'
-          ? ' ⏳'
-          : ''}
-      </span>
-    </li>
-  ))
+  const playerListItems =
+    players !== undefined
+      ? players.map(player => (
+          <li key={player.pseudo} className="sidebar__player-item">
+            <span>
+              {player.pseudo}{' '}
+              <span className="player-score">{player.score}</span>
+            </span>
+            <span>
+              {player.master ? '👑 ' : ''}
+              {player.status === 'done'
+                ? ' ✔'
+                : player.status === 'pending'
+                ? ' ⏳'
+                : ''}
+            </span>
+          </li>
+        ))
+      : undefined
 
   return (
     <div className="sidebar">
