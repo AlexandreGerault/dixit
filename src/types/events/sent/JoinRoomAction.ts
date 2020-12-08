@@ -1,6 +1,3 @@
-type JoinRoomAction = {
-  playerName: string
-  sha: string
-}
+type JoinRoomAction = {action: 'join'; playerName: string; sha: string}
 
 export default JoinRoomAction
