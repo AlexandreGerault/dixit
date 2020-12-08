@@ -13,6 +13,7 @@ body {
   background: url('logo.png') top 24px left 40px, var(--dark-color);
   background-size: 10%;
   background-repeat: no-repeat;
+  margin: 0;
 }
 
 button {
