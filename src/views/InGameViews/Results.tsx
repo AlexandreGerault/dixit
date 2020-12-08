@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from 'react'
-import {Card} from '../components/ui/Card'
-import Player from '../types/game/Player'
+import {Card} from '../../components/ui/Card'
+import Player from '../../types/game/Player'
 import {LayoutSidebar} from './LayoutSidebar'
 
 type ResultsProps = {
@@ -27,7 +27,7 @@ const Results: FunctionComponent<ResultsProps> = ({
               cardId={c.cardId}
               isSelectedCard={selectedId === c.cardId}
               isGoodAnswer={goodId === c.cardId}
-              playerName={c.player.name}
+              playerName={c.player.pseudo}
             />
           ))}
         </div>

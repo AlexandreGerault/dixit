@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from 'react'
-import Player from '../types/game/Player'
+import Player from '../../types/game/Player'
 import {LayoutSidebar} from './LayoutSidebar'
 
 type LobbyGuestProps = {

@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from 'react'
-import {Card} from '../components/ui/Card'
-import Player from '../types/game/Player'
+import {Card} from '../../components/ui/Card'
+import Player from '../../types/game/Player'
 import {LayoutSidebar} from './LayoutSidebar'
 
 type VoteProps = {

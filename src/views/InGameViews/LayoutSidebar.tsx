@@ -1,6 +1,6 @@
 import React from 'react'
-import {Sidebar} from '../components/ui/Sidebar'
-import Player from '../types/game/Player'
+import {Sidebar} from '../../components/ui/Sidebar'
+import Player from '../../types/game/Player'
 
 type WithSideprops = {
   players: Player[]

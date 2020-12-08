@@ -1,5 +1,6 @@
 import React, {FunctionComponent} from 'react'
-import Player from '../types/game/Player'
+import {onStartGameSubmitted} from '../../functions/OnStartGameSubmitted'
+import Player from '../../types/game/Player'
 import {LayoutSidebar} from './LayoutSidebar'
 
 type GameMasterLobbyProps = {
@@ -11,7 +12,14 @@ const GameMasterLobby: FunctionComponent<GameMasterLobbyProps> = ({
 }) => {
   return (
     <LayoutSidebar players={players}>
-      <button className="game__heading">Démarrer la partie</button>
+      <button
+        className="game__heading"
+        onClick={() => {
+          onStartGameSubmitted()
+        }}
+      >
+        Démarrer la partie
+      </button>
     </LayoutSidebar>
   )
 }
