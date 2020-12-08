@@ -1,5 +1,5 @@
 type Player = {
-  name: string
+  pseudo: string
   master: boolean
   status: 'done' | 'pending' | undefined
   score: number

@@ -1,6 +1,8 @@
+import Player from '../../game/Player'
+
 type ConnectedToRoomEvent = {
-  roomName: string
-  roomUsers: string[]
+  users: Player[]
+  host: boolean
 }
 
 export type {ConnectedToRoomEvent}

@@ -1,5 +1,7 @@
+import Player from '../../game/Player'
+
 type UserHasLeftEvent = {
-  username: string
+  players: Player[]
 }
 
 export type {UserHasLeftEvent}
